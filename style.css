@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+.header {
+  height: 100%;
+  display: flex;
+  gap: 1.2rem;
+  font-size: 4.2rem;
+
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.header-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5rem;
+}
+
+.players {
+  font-size: 3.2rem;
+}
+
+.main-container {
+  height: 70%;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  align-items: center;
+}
+
+.board-container {
+  display: grid;
+  /* grid-template-columns: repeat(1fr);
+  grid-template-rows: repeat(1fr); */
+  gap: 1.8rem;
+  align-self: center;
+}
+
+.row {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.btn {
+  width: 10rem;
+  height: 10rem;
+  font-family: inherit;
+  text-align: center;
+}
+
+.btn-text {
+  font-size: 5rem;
+  margin: auto;
+  animation: animateText;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.info {
+  opacity: 0;
+  align-self: flex-start;
+  font-size: 3rem;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animateText {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(0.3rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animatebtnText {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.active:hover {
+  opacity: 1;
+  animation: none;
+  cursor: pointer;
+}
+
+.active {
+  animation: animate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.btnText {
+  animation: animatebtnText;
+  animation-duration: 1s;
+}

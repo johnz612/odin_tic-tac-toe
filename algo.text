@@ -1,0 +1,95 @@
+Win the game 3 times to win the whole game
+
+1.) Intro = > This will determine the computer difficulty level and the piece of each player to use
+
+
+
+
+
+2.) Game flow
+    > If user turns first
+
+        > User clicks an available cell on the board
+
+            > The board updates on the action of the user and computer and udpates the available space on the board
+            > The code will check if there is a winner or a draw
+                > winner when there is a consecutive 3 pieces in the board  
+                > draw when there is no available space on the board
+                
+Solution:
+
+    3 methods
+        1.) Game Board
+
+                Make an empty board first, per cell is an object (the (2) that you can call to update the cell depending on the current state  (okay)
+
+                Update board will receive active player and its piece (okay)
+
+                getBoard = > Wil return the board with its value on it. (okay)
+
+                
+
+
+
+        2.) Key Users functionalities per cell will recieve (player and his piece)
+                returns an object (addPiece, getpiece)
+
+        3.) Game controller
+
+                The flow
+                        > Show board (show available piece of the board)
+                        > When a user clicks update the board logic to update the board array 
+                        > check if there's a winner
+
+                get current active player (Switch this)
+                
+                round
+                  
+                    > Update the value of the cell using the active player's piece (Call )
+
+                    change the object and the value of the board dynamically (okay)
+                    switch the activeplayers
+
+                    switch turn computer and user
+
+                win function   
+                    > will run if someone wins    > this will be run inside the round function
+                        > Per round we need to check if someone wins    
+                            > create win criteria
+
+
+                
+    
+
+
+
+
+
+
+
+
+
+On the example this is what he did
+
+
+3 methods for the game logic
+
+1.) Board function
+        returns { getBoard, dropToken, printBoard}
+
+            Here returns the current status of the board, the function when the board cells is updated, and priting the board
+2.) Cell function
+        returns (addToken, getValue)
+
+
+3.) Game contorller function
+        returns {playround, getActivePlayer, getBoard}
+
+            Here returns what will happen per round, whos the current acitve player and the current board status
+
+1 method for the view logic
+
+1.) Screen Controller
+
+    > UpdateScreen
+    > ClickHanderBloard
